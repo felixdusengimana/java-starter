@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
     <head>
@@ -16,9 +17,17 @@
 
          <div class="flex-1 grow h-full w-full flex justify-center items-center">
              <div class="">
-                 <h1>Welcome to [APP]</h1>
-                 <a class="font-semibold text-blue-400 underline mr-3" href="/auth/">Login</a>
-                 <a class="font-semibold text-blue-400 underline" href="/auth/register">Register</a>
+                 <c:if test="${not empty sessionScope['token']}">
+
+                         <h1>Hey, you're logged in as <strong>${sessionScope['user'].fullNames}</strong></h1>
+                         <address>${sessionScope['user'].email}</address>
+                 </c:if>
+
+                <c:if test="${empty sessionScope['token']}">
+                        <h1>Welcome to [APP]</h1>
+                        <a class="font-semibold text-blue-400 underline mr-3" href="/auth/login">Login</a>
+                        <a class="font-semibold text-blue-400 underline" href="/auth/register">Register</a>
+                </c:if>
              </div>
          </div>
 
