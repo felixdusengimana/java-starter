@@ -21,6 +21,14 @@
 
                          <h1>Hey, you're logged in as <strong>${sessionScope['user'].fullNames}</strong></h1>
                          <address>${sessionScope['user'].email}</address>
+                         <div>
+                             <a class="font-semibold text-blue-400 underline mr-3" href="/student">View Student</a>
+                             <a class="font-semibold text-blue-400 underline" href="/student/add">Add Student</a>
+                         </div>
+                        <div>
+                            <a class="font-semibold text-blue-400 underline mr-3" href="/auth/register">View Courses</a>
+                            <a class="font-semibold text-blue-400 underline" href="/auth/register">Add Course</a>
+                        </div>
                  </c:if>
 
                 <c:if test="${empty sessionScope['token']}">

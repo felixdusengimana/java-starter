@@ -1,11 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="bg-black flex flex-row justify-between px-10 py-5">
-   <h1 class="text-white font-bold text-lg">[APP]</h1>
+    <a href="/"><h1 class="text-white font-bold text-lg">[APP]</h1></a>
     <div class="flex gap-10 text-white">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Help</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/help">Help</a>
     </div>
     <div class="flex gap-10 text-white">
 
